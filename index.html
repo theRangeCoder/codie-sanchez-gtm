@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contrarian Thinking, A GTM Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5F3EE;
+    --ink:#141313;
+    --ink-soft:#59554C;
+    --line:#DEDACE;
+    --accent:#B23A2E;
+    --accent-soft:#F3DFDA;
+    --keep:#4C7A4F;
+    --keep-soft:#E4EEE1;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6;}
+  .wrap{max-width:860px;margin:0 auto;padding:80px 28px 120px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px;}
+  h1{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:clamp(30px,4.6vw,46px);line-height:1.1;margin:0 0 20px;letter-spacing:-0.01em;}
+  .sub{font-size:18px;color:var(--ink-soft);max-width:620px;margin-bottom:48px;}
+  .stat-row{display:flex;gap:28px;flex-wrap:wrap;margin:40px 0 64px;padding:24px 0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);}
+  .stat{font-family:'IBM Plex Mono',monospace;}
+  .stat b{display:block;font-size:22px;color:var(--ink);}
+  .stat span{font-size:12px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em;}
+  h2{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:24px;margin:64px 0 24px;display:flex;align-items:baseline;gap:12px;}
+  h2 .n{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--accent);}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:22px 26px;margin-bottom:18px;}
+  .card.win{border-left:4px solid var(--keep);}
+  .card.gap{border-left:4px solid var(--accent);}
+  .card h3{font-size:16px;margin:0 0 14px;font-weight:700;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);background:var(--accent-soft);padding:3px 8px;border-radius:2px;display:inline-block;margin-bottom:10px;}
+  .tag.keep{color:var(--keep);background:var(--keep-soft);}
+
+  .markup-row{margin-bottom:10px;}
+  .markup-label{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:5px;display:block;}
+  .was{font-size:14.5px;color:#9C9789;text-decoration:line-through;text-decoration-color:#C7C2B4;padding:8px 12px;background:#F0EEE7;border-radius:2px;}
+  .now{font-size:15px;color:var(--ink);padding:8px 12px;background:var(--keep-soft);border-radius:2px;}
+  .rec{font-size:15px;color:var(--ink);padding:10px 14px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:2px;margin-top:8px;}
+  .why{font-size:15px;color:var(--ink);padding:10px 14px;background:var(--keep-soft);border-left:3px solid var(--keep);border-radius:2px;margin-top:8px;}
+
+  .highlight{background:var(--ink);color:var(--bg);border-radius:4px;padding:30px;margin:24px 0;}
+  .highlight .label{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.05em;opacity:.6;margin-bottom:10px;}
+  .highlight p{font-size:17px;line-height:1.7;margin:0;}
+  .highlight b{color:#F3DFDA;}
+
+  .competitor-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;}
+  .comp{background:var(--card);border:1px solid var(--line);padding:16px 18px;font-size:14px;}
+  .comp b{display:block;font-family:'IBM Plex Mono',monospace;font-size:13px;margin-bottom:4px;}
+
+  .roadmap{display:grid;gap:14px;}
+  .phase{display:flex;gap:18px;align-items:flex-start;}
+  .phase .when{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);min-width:110px;padding-top:3px;}
+  .phase .what{font-size:15px;}
+  .phase .what b{display:block;font-size:15px;margin-bottom:2px;}
+
+  footer{margin-top:80px;padding-top:32px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:14px;}
+  a{color:var(--ink);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">GTM read &middot; Contrarian Thinking + BizScout</div>
+  <h1>Your biggest unfair advantage over every BizScout competitor isn't on your homepage.</h1>
+  <p class="sub">I analyzed Contrarian Thinking, codiesanchez.com, and BizScout the way I look at client funnels for a living. One insight stood out more than the rest, so I'm walking through that first, then what's already working well, then where the ecosystem is likely leaking people, point by point.</p>
+
+  <div class="stat-row">
+    <div class="stat"><b>$31M</b><span>revenue, Apr '25 to Mar '26</span></div>
+    <div class="stat"><b>1M+</b><span>weekly newsletter readers</span></div>
+    <div class="stat"><b>10,000</b><span>members taught, 5 years</span></div>
+    <div class="stat"><b>$5M</b><span>BizScout seed round</span></div>
+  </div>
+
+  <h2><span class="n">01</span> The one thing worth reading twice</h2>
+
+  <div class="highlight">
+    <div class="label">The core insight</div>
+    <p>Flippa, Acquire.com, Empire Flippers, and BizBuySell are all pure marketplaces. None of them has anything close to a 1M-weekly-reader audience or a 10,000-person trained buyer community feeding their platform. That's not a small edge. It's the one advantage none of them can copy or buy their way into.</p>
+    <p style="margin-top:14px;">But on contrarianthinking.co right now, BizScout isn't linked from the homepage at all. The audience that could out-distribute every competitor BizScout has is sitting one click away from the marketplace and currently zero clicks connected to it.</p>
+    <p style="margin-top:14px;"><b>If BizScout's goal is genuinely to become #1 globally by end of 2026, this is the cheapest, fastest lever available, and it's already owned. Nothing new needs to be built or bought.</b></p>
+  </div>
+
+  <h2><span class="n">02</span> What's already working, point by point</h2>
+
+  <div class="card win">
+    <span class="tag keep">Keep this</span>
+    <h3>The homepage splits by intent, and gets it right</h3>
+    <div class="markup-row">
+      <span class="markup-label">What's there now</span>
+      <div class="now">"For business buyers" and "For business owners," with a concierge option for anyone unsure where to start.</div>
+    </div>
+    <div class="why">This is the exact fix most funnels need and don't have. Don't touch it. Build on it.</div>
+  </div>
+
+  <div class="card win">
+    <span class="tag keep">Keep this</span>
+    <h3>Trust is solved, not assumed</h3>
+    <div class="markup-row">
+      <span class="markup-label">What's there now</span>
+      <div class="now">Named testimonials with real photos, locations, and businesses. Media logos across Forbes, CNBC, Newsweek, Fox Business, Rolling Stone. A Jay Shetty quote.</div>
+    </div>
+    <div class="why">Most competitors lead with claims. This leads with receipts. This is the single strongest asset on the page.</div>
+  </div>
+
+  <div class="card win">
+    <span class="tag keep">Keep this</span>
+    <h3>"Steal our homework" earns its place</h3>
+    <div class="markup-row">
+      <span class="markup-label">What's there now</span>
+      <div class="now">"One email, two high-value newsletters, steal our homework," paired with the 1M+ weekly reader stat.</div>
+    </div>
+    <div class="why">Specific, on-brand, ownable. Nobody else in this category sounds like this. That voice is doing real conversion work, not decoration.</div>
+  </div>
+
+  <h2><span class="n">03</span> Where it's likely losing people, point by point</h2>
+
+  <div class="card gap">
+    <span class="tag">Fix this</span>
+    <h3>BizScout is invisible from your highest-traffic property</h3>
+    <div class="markup-row">
+      <span class="markup-label">What's there now</span>
+      <div class="was">contrarianthinking.co homepage, no mention or link to BizScout anywhere on the page</div>
+    </div>
+    <div class="rec">Add a visible BizScout module on the homepage and a regular slot in the newsletter. This is internal traffic, not a new channel to build.</div>
+  </div>
+
+  <div class="card gap">
+    <span class="tag">Fix this</span>
+    <h3>Six properties, no shared account</h3>
+    <div class="markup-row">
+      <span class="markup-label">What's there now</span>
+      <div class="was">contrarianthinking.co, codiesanchez.com, contrarianthinkingcapital.com, bizscout.com, ownerbook.com, and the masterclass subdomain, each with its own separate login</div>
+    </div>
+    <div class="rec">One account layer, sign in once, recognized everywhere. Turns six separate first-touch funnels into one compounding relationship.</div>
+  </div>
+
+  <div class="card gap">
+    <span class="tag">Fix this</span>
+    <h3>Four programs, no visible path between them</h3>
+    <div class="markup-row">
+      <span class="markup-label">What's there now</span>
+      <div class="was">Academy, Boardroom, Capital, and BizScout each presented as their own standalone decision</div>
+    </div>
+    <div class="rec">Show the natural journey as one staged path: buy your first business through Academy, execute the purchase through BizScout, scale it through Boardroom, then co-invest in more through Capital.</div>
+  </div>
+
+  <div class="card gap">
+    <span class="tag">Fix this</span>
+    <h3>Europe expansion has no visible groundwork yet</h3>
+    <div class="markup-row">
+      <span class="markup-label">What's there now</span>
+      <div class="was">No European testimonials, no language signal, no regional case studies anywhere currently live</div>
+    </div>
+    <div class="rec">Seed a small set of European case studies and proof points before spending acquisition budget there. The trust mechanism that works domestically needs its own regional version first.</div>
+  </div>
+
+  <h2><span class="n">04</span> The competitive field, as it actually stands</h2>
+
+  <div class="competitor-row">
+    <div class="comp"><b>Flippa</b>Open self-serve, $5K to $500K deals, 10% success fee. High traffic, lower buyer trust signal.</div>
+    <div class="comp"><b>Acquire.com</b>SaaS-focused, around 313K monthly visits. Strong in online and SaaS, weak in Main Street brick and mortar.</div>
+    <div class="comp"><b>Empire Flippers</b>Vetted, higher trust, 15% fee. Slower process, better final pricing.</div>
+    <div class="comp"><b>BizBuySell</b>Dominant sub $5M Main Street. Owned by LoopNet since 2004. No media or audience layer at all.</div>
+  </div>
+  <p style="color:var(--ink-soft);font-size:14px;">None of the four have an owned media audience. That's the gap BizScout can close that none of them can defend against.</p>
+
+  <h2><span class="n">05</span> If I were sequencing this</h2>
+
+  <div class="roadmap">
+    <div class="phase">
+      <div class="when">2 to 4 weeks</div>
+      <div class="what"><b>Connect the audience to BizScout.</b> Homepage module, newsletter placement. It's the cheapest top-of-funnel BizScout will ever get.</div>
+    </div>
+    <div class="phase">
+      <div class="when">1 to 2 months</div>
+      <div class="what"><b>Build the visible path.</b> Academy, then BizScout, then Boardroom, then Capital, shown as one staged journey instead of four separate doors.</div>
+    </div>
+    <div class="phase">
+      <div class="when">Ahead of Europe launch</div>
+      <div class="what"><b>Seed regional trust first.</b> European case studies and proof points before acquisition spend lands there.</div>
+    </div>
+  </div>
+
+  <footer>
+    Put together by Shuvadarshan, a GTM Systems Engineer based in Berlin. I put this together because what you've built deserves to have this advantage fully working for it.<br>
+    <a href="https://linkedin.com/in/shuvadarshan-bhual">linkedin.com/in/shuvadarshan-bhual</a>
+  </footer>
+
+</div>
+</body>
+</html>
